@@ -1,0 +1,321 @@
+/* GLOBAL AND MOBILE STYLES FIRST */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    padding: 0.5em 1em 0.5em 1em;
+    font-family: Arial, Helvetica, sans-serif;
+	background-color:  #B9A2A4;
+	background-color: #C4C2E8;
+}
+
+header nav {
+    width: 100%;
+	/*background-color:  green; */
+}
+
+nav {
+	display: none;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	padding: 1em;
+	display: block;
+    text-align: left;
+    margin-left: -1em; /* move text closer to left*/
+}
+
+#menu {
+/*	background-color:  purple; */
+	display: block;
+	text-align: left;
+    font-size: 1.5em;
+	line-height: 1.5;
+    width: 20%;
+}
+
+#menu:hover { /* Menu button */
+    text-decoration: underline;
+} 
+
+.show-menu {
+	display: block;
+    border-top: black 1px solid;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+li a:hover {
+	text-decoration-line: underline;
+}
+
+/* LOGIN 
+
+header .nav-login {
+	padding: 0;
+	margin: 0;
+}
+
+header .nav-login form {
+}
+
+header .nav-login form input {
+    width: 100%;
+    height: 50px;
+    padding: 0px 10px;
+    border: none;
+    background-color: #ccc;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    line-height: 30px; 
+	margin-top: 1em;
+}
+
+header .nav-login form button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #f3f3f3;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    cursor: pointer;
+}
+
+#user-login {
+	margin-top: 1em;
+}
+
+header .nav-login form button:hover, header .nav-login a:hover {
+    background-color: #ccc;
+}
+
+header .nav-login a {
+    display: block;
+	padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: pink;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+/* FIRST BREAKPOINT (MEDIUM SIZE) */
+
+@media screen and (min-width: 500px) {
+	
+header {
+	width: 100%;
+}
+
+header nav {
+    width: 30%;
+	height: 100%;
+	background-color: #C4C2E8;
+	position: absolute;
+	right: 0;
+}
+
+#menu {
+/*	background-color:  purple; */
+	text-align: right;
+    width: 95%;
+	
+} 
+
+.show-menu {
+    border-top: none;
+	padding-right: 0.5em;
+}
+
+}
+/* END FIRST BREAKPOINT */
+
+
+/* SECOND BREAKPOINT (DESKTOP SIZE) */
+
+@media screen and (min-width: 1000px) {
+	
+	header {
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100%;
+        padding: 0;
+        height: 48px;
+	}
+	
+	header ul {
+		display: inline;
+	}
+	
+	header nav ul {
+    display: flex;
+		justify-content: center;
+}
+
+header nav {
+    width: 100%;
+	height: 48px;
+
+	/*background-color:  green; */
+}	
+	
+header nav ul li{
+    float: left;
+    list-style: none;
+}  
+ 
+	
+	nav {
+		display: block;
+        padding: 0;
+	}
+    
+	nav a {
+		padding: 0.5em;
+	}
+	#menu {
+		display: none;
+	}
+	
+	nav ul {
+		margin: 0;
+		/* removes default margin and padding */
+		padding: 0;
+		list-style-type: none;
+		/* removes all default list bullet points */
+		text-align: center;
+	}
+	nav li {
+		display: inline-block;
+		/* makes the main menu items line up horizontally */
+		position: relative;
+		/* sets the positioning context for dropdowns */
+		background: red;
+		margin-right: -4px;
+		/* closes up the annoying spaces when li elements are on separate lines */
+		border-right: 2px solid rgba(237, 237, 237, .9);
+		/* add your own divisions between menu items */
+		;
+	}
+	nav li:last-child {
+		border-right: none;
+		/* removes the border from the last main menu item only */
+		;
+	}
+	nav ul a:link,
+	nav ul a:visited {
+		height: 2em;
+		display: inline-block;
+		/* makes 'a' tags accept block styles */
+		line-height: 2em;
+		/* vertically centres each (single-line) menu item */
+		width: 12em;
+		/* makes menu items all the same width */
+		text-align: center;
+		color: #333;
+		/* changes the default blue/purple link colors */
+		text-decoration: none;
+		/* removes the default link underline */
+		;
+	}
+
+	
+	#nav-menu ul li {
+		margin-left: 0px;
+		border: none;
+		padding-bottom: 0;
+		padding-top: 0;
+		box-shadow: none;
+		/* Hides raised box-shadow */
+	}
+	
+	nav a {
+		text-decoration: none;
+		color: #fff;
+		display: block;
+		font-size: 16px;
+		box-shadow: none;
+	}
+
+	ul.firstlevel li:hover>a {
+		color: #00BD9D;
+		background-color: #fff;
+	}
+	
+	
+/* LOGIN 
+
+header .nav-login {
+	padding: 0;
+	margin: 0;
+    float: right;
+}
+
+header .nav-login form {
+    float: left;
+    margin-right: 1em;
+}
+
+header .nav-login form input {
+    float: left;
+    width: 180px;
+    height: 40px;
+    padding: 0px 10px;
+	margin-top: 3px;
+    margin-right: 10px;
+}
+
+
+header .nav-login form button {
+    float: left;
+    width: 80px;
+    height: 40px;
+    border: none;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+	
+	
+#user-login {
+	margin-top: 0.3em;
+}
+
+header .nav-login a {
+    display: block;
+    width: 60px;
+    height: 40px;
+    border: none;
+    float: left;
+    cursor: pointer;
+	margin-top: 0.3em;
+	line-height: 40px;
+	padding: 0 0.5em;
+	margin-left: -6px;
+}
+   */
+    
+}
+
+
+/* END SECOND BREAKPOINT */

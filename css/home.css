@@ -1,0 +1,140 @@
+/* Section A */
+
+#section-a,
+#menu-1-list {
+	background: #eaeaea;
+	color: #333;
+	padding-bottom: 2em;
+}
+
+
+/* Section B */
+
+#section-b {
+	padding: 2em 1em 1em;
+}
+
+#section-b ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#section-b li {
+	margin-bottom: 1em;
+	background: #fff;
+	color: #333;
+}
+
+.card-content {
+	padding: 1.5em;
+}
+
+
+/* Section C */
+
+#section-c {
+	background: #fff;
+	color: #333;
+	padding: 2em;
+}
+
+
+/* Section D / Boxes */
+
+#section-d .box,
+#section-h .box {
+	padding: 2em;
+	color: #fff;
+}
+
+#section-d .box:first-child,
+#section-h .box:first-child {
+	background: #2690d4;
+}
+
+
+/* Section E */
+
+#section-e {
+	background-color: white;
+	color: black;
+	padding: 2em;
+}
+
+
+
+/* about.php */
+
+
+/* Section F */
+
+#section-f {
+	background-color: white;
+	color: black;
+	padding: 2em;
+}
+
+#section-g {
+	background-color: #ccc;
+	color: black;
+	padding: 2em;
+}
+
+
+/* menu.php Section Menu / Boxes */
+
+#section-menu-1 {
+    padding: 2em;
+    text-align: left;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+	}
+	#section-a h2,
+	{
+		padding-top: 2em;
+	}
+	#section-a .content-text,
+	#menu-1-list .content-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+	#section-a .content-text p,
+	#menu-1-list .content-text p {
+		padding-top: 0;
+	}
+	.content-wrap,
+	#section-b ul,
+	#menu-1-list .content-text {
+		grid-column: 2/4;
+	}
+	.box,
+	#main-footer div {
+		grid-column: span 2;
+	}
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	#section-b li {
+		width: 31%;
+	}
+
+	#section-f h2 {
+		padding-top: 2em;
+	}
+	#section-f .content-text {
+		columns: 1;
+		column-gap: 2em;
+	}
+	#section-f .content-text p {
+		padding-top: 0;
+	}
+
+
